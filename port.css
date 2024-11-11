@@ -1,0 +1,565 @@
+/*font-family: "Alegreya Sans", sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Orbitron:wght@400..900&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: "Alegreya Sans", sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding: 65px;
+}
+
+body{
+    min-height: 100vh;  /*  this property for 'footer' element */
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Sora';
+    background-color: black;
+}
+
+h2{
+    color: rgb(220, 215, 215);
+}
+
+/* ------------------- nav -----------------------------------------------*/
+
+nav{
+    background: black;
+    height: 68px;
+    width: 100%;
+    position: fixed;
+    z-index: 10; /* Higher z-index to stay on top */
+}
+
+.connection{
+    line-height: 68px;
+    color: black;
+    margin-left: 60px;
+    padding: 7px;
+    background-color: #ffc200;
+    border-radius: 7px;
+    transition: all ease 0.1s;
+}
+
+.connection i{
+    margin-left: 5px;
+}
+
+.connection:hover{
+    background-color: black;
+    border: 1px solid #ffc200;
+    color: rgb(220, 215, 215);
+    cursor: pointer;
+}
+
+nav ul{
+    float: right;
+    margin-right: 80px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 68px;
+    margin: 0 20px;
+}
+
+nav ul li a{
+    color : rgb(220, 215, 215);
+    font-size: 20px;
+    padding: 7px 13px;
+}
+
+a:hover{
+    color: #ffc200;
+    transition: 0.5s;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: #ffc200;
+    float: right;
+    line-height: 68px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+
+@media (max-width: 952px){
+
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 700px){
+    .checkbtn{
+        display: block;
+    }
+
+    nav ul{
+        position: fixed;
+        width: 50%;
+        height: 50%;
+        top: 60px;
+        left: -50%;
+        text-align: center;
+        border-radius: 0 15px 15px 0;
+        transition: all ease .5s;
+        border: 1px solid #ffc200;
+        border-left: none;
+        background-color: black;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 45px;
+        line-height: 45px;
+    }
+
+    nav ul li a{
+        color: rgb(220, 215, 215);
+        font-size: 20px;
+    }
+
+    a:hover{
+        color: #ffc200;
+    }
+
+    #check:checked ~ ul{
+        left: 0;
+    }
+
+}
+
+@media (max-width: 430px) {
+    .connection{
+        margin-left: 30px;
+    }
+}
+
+
+/*---------------------------------------------FOOTER----------------------------------------*/
+
+.foot{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 60px 0 20px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: rgb(220, 215, 215);
+}
+
+.foot p{
+    margin: 10px 30px 10px 30px;
+}
+
+@media (max-width: 430px) {
+    .foot{
+        font-size: 10px;
+    }
+}
+
+/*_________________________MAIN--------------------*/
+main{
+    padding-top: 100px;
+}
+
+
+/*ABOUT SECTION*/
+
+#about{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 15px;
+    padding-top: 70px;
+    position: relative; /* Positioning to control z-index */
+    z-index: 1;
+    background-size: cover;
+}
+
+.about_image{
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    overflow: hidden;
+    margin: 10px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.about_image img{
+    width: 100%;
+    height: 100%;
+}
+
+.about_details{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 70%;
+}
+
+.about_name_about{
+    width: 100%;
+}
+
+.about_name{
+    width: 300px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-weight: 400;
+    position: relative; /* Positioning to respect z-index */
+    z-index: 1; /* Ensures it doesn't go above nav */
+}
+
+.nam{
+    position: relative;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+#name_1st{
+    color: rgb(220, 215, 215);
+}
+
+.about_name p{
+    color: transparent;
+    overflow: hidden;
+    width: 100%;
+    padding: 20px;
+}
+
+.about_about{
+    padding: 20px;
+    text-align: justify;
+    width: 100%;
+    color: rgb(220, 215, 215);
+}
+
+#name_2nd{
+    color: #ffc200;
+    margin-left: 5px;
+}
+
+#name_2nd:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    border-left: 2px solid #ffc200;
+    animation: animate 4s steps(12) infinite;
+}
+@keyframes animate{
+    40%, 60%{
+        left: calc(100% + 4px);
+    }
+    100%{
+        left: 0%;
+    }
+}
+
+
+@media (max-width: 765px) {
+    .about_details{
+        width: 100%;
+    }
+
+    .about_name{
+        width: 100%;
+    }
+}
+
+
+/*Resume section*/
+.resume{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px 0 10px 0;
+    padding: 15px;
+}
+
+.resume a{
+    border: 3px solid rgb(220, 215, 215);
+    border-radius: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(220, 215, 215);
+    padding: 15px;
+    transition: all ease 0.2s;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    margin: 10px;
+}
+
+.resume a i{
+    margin-right: 10px;
+}
+
+.resume a:hover{
+    color: #ffc200;
+    border-color: #ffc200;
+    scale: 1.1;
+}
+
+/*-----------------PROJECT SECTION------------------------*/
+
+.headings{
+    margin-top:10px;
+    padding: 10px 15px 10px 60px;
+    font-size: 35px;
+    color: #ffc200;
+}
+
+#Project{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.box{
+    width: 200px;
+    height: 217px;
+    padding: 10px;
+    margin: 15px;
+    border: 2px solid rgb(220, 215, 215);
+    border-radius: 10px;
+    transition: all ease 0.2s;
+}
+
+.box:hover{
+    scale: 1.2;
+    cursor: pointer;
+    border-color: #ffc200;
+}
+
+.box-content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    flex-wrap: wrap;
+}
+
+.box-content h2{
+    font-size: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #ffc200;
+    font-weight: 300;
+}
+
+.box-img{
+    height: 100px;
+    width: 100px;
+    background-size: cover;
+    margin-bottom: 10px;
+    transition: all ease 0.2s;
+    border-radius: 10px;
+}
+
+.box-img:hover{
+    scale: 1.2;
+    cursor: pointer;
+}
+
+.box-tech{
+    width: 100%;display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 5px;
+}
+
+.box-tech p{
+    border: 1px solid #ffc200;
+    border-radius: 3px;
+    color: rgb(220, 215, 215);
+    padding: 3px;
+    font-size: 10px;
+    margin-left: 5px;
+    text-align: center;
+}
+
+.more_projects{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.more_projects a{
+    width: 100%;
+    text-align: left;
+    color: rgb(220, 215, 215);
+    margin: 10px 0 10px 0;
+}
+
+.more_projects a:hover{
+    color: #ffc200;
+}
+
+#box5:hover{
+    cursor: default;
+}
+
+
+/*----------------- SkIllsss Section-------------------*/
+.skills{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+    font-family: 'Sora', sans-serif;
+    margin: 25px 0 20px 0;
+}
+
+.skill{
+    padding: 20px;
+    height: 150px;
+    width: 120px;
+    transition: all ease 0.2s;
+}
+
+.skill:hover{
+    scale: 1.2;
+}
+
+.skill img{
+    height: 80%;
+    width: 100%;
+}
+
+.skill p{
+    font-size: 2vh;
+    margin: 0;
+    text-align: center;
+    color: rgb(220, 215, 215);
+}
+
+
+/*--------------CONTACT SECTION ___________-------------------*/
+
+.contact{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+
+.contact_form{
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.input_box{
+    width: 90%;
+    height: 40px;
+    padding-left: 10px;
+    margin: 15px;
+    border: 1px solid #ffc200;
+    border-radius: 10px;
+    background-color: black;
+    color: rgb(220, 215, 215);
+}
+
+#message_box{
+    height: 100px;
+    resize: none;
+    padding-top: 15px;
+}
+
+.input_box::placeholder{
+    color: white;
+}
+
+#sub_btn{
+    line-height: 0;
+    height: 40px;
+    font-weight: 600;
+    margin-left: 20px;
+}
+
+@media (max-width: 430px) {
+    .contact_form{
+        width: 300px;
+    }
+}
+
+/*social links*/
+
+.socail_links{
+    width: 200px;
+}
+
+.socail_links p{
+    width: 90%;
+    margin: 20px 5px 20px 5px;
+    text-align: center;
+    border: 2px solid rgb(220, 215, 215);
+    padding: 10px;
+    transition: all ease 0.2s;
+}
+
+.socail_links p a{
+    color: #ffc200;
+    transition: all ease 0.2s;
+}
+
+.socail_links p a:hover{
+    color: rgb(220, 215, 215);
+}
+
+.socail_links p a i{
+    margin-left: 10px;
+}
+
+.socail_links p:hover{
+    border-color: #ffc200;
+}
+
+
+@media (max-width: 630px) {
+    .socail_links{
+        margin-top: 50px;
+    }
+}
